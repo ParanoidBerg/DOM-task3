@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интукод</title>
+  </head>
+  <body>
+    <div id="main">
+      <ul id="list">
+        <li>html</li>
+        <li>css</li>
+      </ul>
+    </div>
+    <div id="copyright">(c) INTOCODE</div>
+
+    <script>
+      const addTitle = () => {
+        const h1 = document.createElement("h1");
+        h1.textContent = "Работа с DOM";
+        document.body.prepend(h1);
+      };
+      const DOMlink = () =>{
+          const main = document.getElementById('main')
+          const link = document.createElement('a')
+          link.href = 'https://learn.javascript.ru/dom-nodes'
+          link.textContent = 'Статья о DOM'
+          main.append(link)
+      }
+      const changeColor = (newColor) => document.body.style.backgroundColor = newColor
+      
+      const expandList = (newText) => {
+        const list = document.getElementById('list')
+        const li = document.createElement('li')
+        li.textContent = newText
+        list.append(li)
+      }
+      const del = () => {
+          const cr = document.getElementById('copyright')
+          cr.remove()
+      }
+    </script>
+  </body>
+</html>
